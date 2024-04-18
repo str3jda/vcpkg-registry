@@ -6,14 +6,11 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO  str3jda/TraceApp 
     REF c98e2a81200857c6f4eda30777c097977910afc0
-    SHA512 "0"
+    SHA512 01021b5341cc1c610e75c92fe86afa34b8a5793269752460a7d44adfbbe36de4f280cdf4aa17add663c82ba215f1dbf9c05bef66250d85af70ed232f0e3464ac
     HEAD_REF master
 )
 
-vcpkg_cmake_configure(
-    SOURCE_PATH "${SOURCE_PATH}"
-    OPTIONS
-        -DTRACE_BUILD_SERVER=OFF)
+vcpkg_cmake_configure(SOURCE_PATH "${SOURCE_PATH}")
 
 vcpkg_cmake_install()
 
