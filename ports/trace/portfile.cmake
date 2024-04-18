@@ -10,7 +10,7 @@ vcpkg_from_github(
     HEAD_REF master
 )
 
-vcpkg_cmake_configure( SOURCE_PATH "${SOURCE_PATH}" PREFER_NINJA )
+vcpkg_cmake_configure(SOURCE_PATH "${SOURCE_PATH}")
 
 vcpkg_cmake_install()
 vcpkg_fixup_pkgconfig()
