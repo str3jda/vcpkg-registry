@@ -5,8 +5,8 @@ vcpkg_check_linkage(ONLY_STATIC_LIBRARY)
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO  str3jda/TraceApp 
-    REF c3810a868fc84592ea70cf8445ccff2856147ccf
-    SHA512 ""
+    REF c98e2a81200857c6f4eda30777c097977910afc0
+    SHA512 "0"
     HEAD_REF master
 )
 
