@@ -2,7 +2,7 @@
 
 - [SHA512 for vcpkg_from_github] 
 	- download tar.gz of target commit
-	- git hash xxx.tar.gz
+	- https://emn178.github.io/online-tools/sha512_file_hash.html
 
 - default port version (/versions/baseline.json)
 	- sets version of latest commits of each lib, which user downloads by default (=> update to latest on each new version)
