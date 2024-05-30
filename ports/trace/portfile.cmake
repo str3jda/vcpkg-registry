@@ -6,11 +6,21 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO  str3jda/TraceApp 
     REF 1.0.0
-    SHA512 fa2e12ee28fa48df9485087592cf942251b33c0aac46dc5686fd756508ea3412dbe964b5f927a8cd821eeef1b47a310d485aef183c73d26fe4a09171ba7acbf1
+    SHA512 83e8c1272eb50dc8f1dd454df5c476aa4c52a7c4b4645f7035335155b79cc700ffd8b1b8ab42a2dcafc6941b4ee1a160299999deb81d53ce3d7d124da4b3006f
     HEAD_REF master
 )
 
-vcpkg_cmake_configure(SOURCE_PATH "${SOURCE_PATH}")
+vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
+    FEATURES
+        "app"  TRACE_BUILD_APP
+        "pipe" TRACE_SUPPORT_PIPE
+        "mqtt" TRACE_SUPPORT_MQTT
+)
+
+vcpkg_cmake_configure(
+    SOURCE_PATH "${SOURCE_PATH}"
+    OPTIONS ${FEATURE_OPTIONS}
+)
 
 vcpkg_cmake_install()
 vcpkg_fixup_pkgconfig()
