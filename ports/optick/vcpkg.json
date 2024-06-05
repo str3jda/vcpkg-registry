@@ -1,6 +1,6 @@
 {
     "name": "optick",
-    "version-string": "1.4.00",
+    "version-string": "1.4.0.0",
     "port-version": 1,
     "description": "Optick is a super-lightweight C++ profiler for Games.",
     "homepage": "https://github.com/bombomby/optick",
